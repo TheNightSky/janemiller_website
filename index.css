@@ -1,14 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: hsla(240, 27%, 18%, 1);
+    background: #4A4E69;
     color: #F2E9E4;
     font-family: 'Cormorant Garamond', serif;
-
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 
+div.layout {
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .container {
-    max-width: 1600px;
-    padding: 0px 150px
+    padding: 0px 200px
+}
+
+#nav {
+    margin: 0;
 }
 
 nav {
@@ -16,64 +31,228 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    background-color: #22223B;
+    top: 0;
+    transition: transform .5s; 
 
 }
 
+.nav--hidden {
+    transform: translateY(-125px);
+    box-shadow: none;
+}
+
+.wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+
+nav div{
+    padding-bottom: 0;
+}
 nav h1 a{
     color: #F2E9E4;
-
-    font-size: 40px;
+    padding-bottom: 15px;
+    font-size: 60px;
     font-weight: bold;
+    transition: color .2s;
 }
 
-ul {
+nav h1 a:hover {
+    color: #C9ADA7;
+}
+
+nav ul {
     display: flex;
     list-style-type: none;
 }
+
+div.side-link-container {
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+}
+
+
+ul.side-links {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+    
+}
+
+ul.side-links::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 140px;
+    margin: 0px auto;   
+    background-color: #F2E9E4;
+
+    }
+
+ul.side-links li {
+    padding: 10px;
+
+}
+
+
+li a svg {
+    fill:#F2E9E4;
+    border-radius: 0;
+    width: 25px;
+    height: auto;
+    transition: fill .2s;
+    
+}
+
+li a svg:hover {
+    fill: #C9ADA7;
+   
+}
+
+
+
 div.link-container{
+    margin-left: 30px;
     display: inline-flex;
     align-items: center;
 }
 .link-container ul a {
-    color: white;
-    padding: 10px;
+    color: #F2E9E4;
+    padding: 20px;
+    font-family: 'Proza Libre';
+    text-decoration: none;
+    cursor: default;
+    transition: color .2s;
 }
-#cv {
-        color: var(--green);
+
+.link-container ul a:hover {
+    color: #C9ADA7;
+}
+
+#research {
+    cursor:pointer;
+}
+#cv {   font-family: 'Proza Libre';
         background-color: transparent;
-        border: 1px solid white;
+        border: 2px solid ;
         border-radius: 5em;
         padding: 0.75rem 1rem;
-        font-family: var(--font-mono);
         line-height: 1;
-        text-decoration: none;
         cursor: pointer;
-        margin-left: 15px;
-        font-size: var(--fz-xs);
+        margin-left: 30px;
+        transition: color .2s, background-color .2s, border-color .2s;
+}
+
+#cv:hover {
+    border-color: transparent;
+    color: #4A4E69;
+    background-color: #C9ADA7;
 }
 
 
+
+section.home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0px;
+}
 h1.home {
-    font-size: clamp(40px, 8vw, 80px)
+    font-size: clamp(80px, 10vw, 120px);
+    color: #C9ADA7 ;
+    margin: 0 1em;
+    margin-top: 1em;
+    margin-left: 0;
 }
 
-img {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    border-radius: 50%;
-    object-fit: none;
+h2.home {
+    font-size: clamp(40px, 6vw, 50px);
+    margin-bottom: 5em;
 }
+
+
+
 
 section {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.about {
-    display: flex;
+section.about {
+    margin-top: 15em;
+    padding: 5em 0;
 }
 
-div.about {
-    margin: 30px;
+
+
+div.ib-container{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.ib-container p {
+    font-family: 'Proza Libre';
+    line-height: normal;
+    font-size: clamp(10px, 6vw, 16px);
+}
+
+img {
+    
+    width: 400px;
+    height: 400px;
+  
+    margin-left: 100px;
+    border-radius: 50%;
+    object-fit: none;
+}
+
+h2.about {
+    font-size: clamp(30px, 6vw, 50px);
+    display: block;
+}
+
+div.papers p {
+    font-family: 'Proza Libre';
+    line-height: normal;
+    font-size: clamp(10px, 6vw, 18px);
+}
+
+div.papers p a {color: #C9ADA7 }
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #C9ADA7;
+    font-family:'Courier New', Courier, monospace;
+    background-color: #2E2423;
+    padding: 10px 10px;
+
+
+}
+
+footer a {
+    color: #C9ADA7;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+footer a:hover {
+    color:#F2E9E4;
 }
