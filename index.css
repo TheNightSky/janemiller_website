@@ -87,9 +87,7 @@ ul.side-links {
     align-items: center;
     margin: 0px;
     padding: 0px;
-    list-style: none;
-    
-    
+    list-style: none;   
 }
 
 ul.side-links::after {
@@ -99,12 +97,10 @@ ul.side-links::after {
     height: 140px;
     margin: 0px auto;   
     background-color: #F2E9E4;
-
-    }
+}
 
 ul.side-links li {
     padding: 10px;
-
 }
 
 
@@ -113,8 +109,7 @@ li a svg {
     border-radius: 0;
     width: 25px;
     height: auto;
-    transition: fill .2s;
-    
+    transition: fill .2s;  
 }
 
 li a svg:hover {
