@@ -1,4 +1,8 @@
 const nav = document.querySelector('.nav');
+const popup = document.querySelector('.popup');
+
+
+
 
 let lastScrollY = window.scrollY;
 
@@ -12,5 +16,10 @@ window.addEventListener('scroll', () => {
         nav.classList.remove("nav--hidden");
     }
     lastScrollY = window.scrollY;
+});
+
+
+popup.addEventListener('click', () => {
+    
 });
 

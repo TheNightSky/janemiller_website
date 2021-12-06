@@ -1,0 +1,19 @@
+.research-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+img.normal {
+    display: block;
+    border-radius: 0%;
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+    display: flex;
+    margin: 0px;
+
+}
+
+

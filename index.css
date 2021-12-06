@@ -1,5 +1,9 @@
 html {
     scroll-behavior: smooth;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    
 }
 
 body {
@@ -19,7 +23,12 @@ div.layout {
 }
 
 .container {
-    padding: 0px 200px
+    padding: 0px 200px;
+    max-width: 2000px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 #nav {
@@ -183,6 +192,7 @@ h2.home {
 
 
 
+
 section {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -193,33 +203,69 @@ section.about {
     padding: 5em 0;
 }
 
-
+#papers-beg {
+    margin-top: 20px;
+}
 
 div.ib-container{
     margin: 30px 0;
     display: flex;
+    flex-wrap: wrap-reverse;
     align-items: center;
+    justify-content: center;
 }
 
-.ib-container p {
+/* Changed this for all paragraphs */
+ p {
     font-family: 'Proza Libre';
     line-height: normal;
     font-size: clamp(10px, 6vw, 16px);
+    line-height: 2;
+}
+
+p.about {
+    max-width: 700px;
+    min-width: none;
+    margin-right: 100px;
+}
+
+p.selected-research {
+    border: 5px;
+    font-size: 1em;
+    margin-top: 50px;
+    max-width: 800px;
+    line-height: 2;
+}
+
+div.selected-research {
+    margin-left: 12.5%;
 }
 
 img {
     
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   
-    margin-left: 100px;
     border-radius: 50%;
-    object-fit: none;
+    object-fit: contain;
+
 }
 
 h2.about {
     font-size: clamp(30px, 6vw, 50px);
-    display: block;
+    
+}
+
+h3.about {
+    font-size: clamp(18px, 6vw, 24px);
+    font-family: "Proza Libre";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 3em;
+
+
 }
 
 div.papers p {
@@ -229,6 +275,12 @@ div.papers p {
 }
 
 div.papers p a {color: #C9ADA7 }
+
+
+footer {
+    margin-top: 50px;
+}
+
 
 footer div {
     display: flex;
@@ -250,4 +302,87 @@ footer a {
 
 footer a:hover {
     color:#F2E9E4;
+}
+
+
+
+
+
+@media (min-width: 800px) and (max-width: 1000px)
+{
+
+}
+
+
+@media (max-width: 1550px) {
+
+    p.about {
+        margin-top: 100px;
+
+    }
+    img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+
+
+
+@media (max-width: 1200px) {
+    
+    p.about {
+        margin-right: 0px;
+
+    }
+    div.icons ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0px;
+    }
+
+    div.icons ul::after, div.icons ul::before {
+        content: "";
+        display: flex;
+
+        width: 200px;
+        height: 1px;   
+        background-color: #F2E9E4;
+    }
+
+   
+
+    li {
+        display: inline;
+    }
+
+    div.side-link-container {
+      display: none;
+    }
+
+    div.container {
+        padding: 0px 50px;
+    }
+}
+
+
+@media (min-width: 1201px) {
+    div.icons {
+        display: none;
+    }
+}
+
+
+@media (max-width: 950px) {
+    div.icons ul::before, div.icons ul::after {
+        content: "";
+        display: flex;
+
+        width: 50px;
+        height: 1px;   
+        background-color: #F2E9E4;
+    }
+    }
 }
